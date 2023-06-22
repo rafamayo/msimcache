@@ -19,6 +19,13 @@ msimcache -s 64 -b 32 -a 1 -t trace
   + 1 (direct mapped)
   + 2, 4, 8, etc. (set associative)
   + 0 (full associative)
++ -w write behaviour
+  + 0 write back / write allocate
+  + 1 write through / non write allocate
++ -e eviction strategy
+  + 0 RANDOM
+  + 1 FIFO
+  + 2 LRU
 + -t trace file
 
 ### Creating the data structure
