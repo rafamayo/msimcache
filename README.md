@@ -10,23 +10,23 @@ The Cache is a 3-dimensional array
   + 1 (direct mapped), set associative (2, 4, 8, etc.)
 
 
-### Command line
-msimcache -s 64 -b 32 -a 1 -t trace
+### Command line example
+msimcache --size 64 --block 32 --assoc 2 --write 0 --evict 0 --trace example1.trace
 
-+ -s Cache size in KiB
-+ -b Block size in Byte
-+ -a associativity:
++ --size Cache size in KiB
++ -block Block size in Byte
++ --assoc associativity:
   + 1 (direct mapped)
   + 2, 4, 8, etc. (set associative)
   + 0 (full associative)
-+ -w write behaviour
++ --write write behaviour
   + 0 write back / write allocate
   + 1 write through / non write allocate
-+ -e eviction strategy
++ --evict eviction strategy
   + 0 RANDOM
   + 1 FIFO
   + 2 LRU
-+ -t trace file
++ -trace trace file
 
 ### Creating the data structure
 
